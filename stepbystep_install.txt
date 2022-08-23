@@ -1,0 +1,9 @@
+conda create -n alignps python=3.7 -y
+conda activate alignps
+conda install pytorch==1.7.0 torchvision torchaudio cudatoolkit=11.0 -c pytorch -c conda-forge
+pip install mmcv-full==1.2.0 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html
+git clone https://github.com/polivares/AlignPS.git
+cd AlignPS/
+pip install -r requirements/build.txt
+pip install -v -e . 
+conda install scipy scikit-learn
